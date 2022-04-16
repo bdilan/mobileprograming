@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/awal.dart';
-import 'package:flutter_application_1/daftaruser.dart';
-import 'package:flutter_application_1/daftarvets.dart';
 
-class daftar extends StatefulWidget {
-  const daftar({Key? key}) : super(key: key);
+class daftaruser extends StatefulWidget {
+  const daftaruser({Key? key}) : super(key: key);
 
   @override
-  State<daftar> createState() => _awalState();
+  State<daftaruser> createState() => _awalState();
 }
 
-class _awalState extends State<daftar> {
+class _awalState extends State<daftaruser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,23 +34,15 @@ class _awalState extends State<daftar> {
                           child: Padding(
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(0, 0, 90, 0),
-                            child: GestureDetector(
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(100),
-                                  child: Image.asset(
-                                    'images/user.jpg',
-                                    width: 100,
-                                    height: 100,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                onTap: () {
-                                  Navigator.pop(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => daftaruser(),
-                                      ));
-                                }),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(100),
+                              child: Image.asset(
+                                'images/user.jpg',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -62,23 +52,14 @@ class _awalState extends State<daftar> {
                           width: 100,
                           height: 100,
                           decoration: BoxDecoration(),
-                          child: GestureDetector(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(100),
-                              child: Image.asset(
-                                'images/dokter.jpg',
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                              ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.asset(
+                              'images/dokter.jpg',
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
                             ),
-                            onTap: () {
-                              Navigator.pop(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => daftarvets(),
-                                  ));
-                            },
                           ),
                         ),
                       ),

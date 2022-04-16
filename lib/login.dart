@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/awal.dart';
 import 'package:flutter_application_1/daftar.dart';
+import 'package:flutter_application_1/home.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _awalState extends State<login> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
                   child: Container(
                     width: 350,
                     height: 350,
@@ -95,7 +96,7 @@ class _awalState extends State<login> {
                       color: Color(0xFF6E6CC8),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => awal()));
+                            MaterialPageRoute(builder: (context) => home()));
                       },
                       child: Text(
                         "Masuk",
