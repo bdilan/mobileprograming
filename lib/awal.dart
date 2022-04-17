@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/daftar.dart';
 import 'package:flutter_application_1/login.dart';
+import 'package:flutter_application_1/regisvets.dart';
 
 class awal extends StatefulWidget {
-  const awal({Key? key}) : super(key: key);
-
   @override
-  State<awal> createState() => _awalState();
+  State<awal> createState() => _HomeWidgetState();
 }
 
-class _awalState extends State<awal> {
+class _HomeWidgetState extends State<awal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

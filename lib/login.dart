@@ -4,13 +4,11 @@ import 'package:flutter_application_1/daftar.dart';
 import 'package:flutter_application_1/home.dart';
 
 class login extends StatefulWidget {
-  const login({Key? key}) : super(key: key);
-
   @override
-  State<login> createState() => _awalState();
+  State<login> createState() => _HomeWidgetState();
 }
 
-class _awalState extends State<login> {
+class _HomeWidgetState extends State<login> {
   bool _isObscure = true;
   @override
   Widget build(BuildContext context) {

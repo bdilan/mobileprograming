@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/awal.dart';
-import 'package:flutter_application_1/daftaruser.dart';
-import 'package:flutter_application_1/daftarvets.dart';
+import 'package:flutter_application_1/regisvets.dart';
+import 'package:flutter_application_1/regisuser.dart';
+import 'package:flutter_application_1/login.dart';
+import 'package:flutter_application_1/home.dart';
 
 class daftar extends StatefulWidget {
-  const daftar({Key? key}) : super(key: key);
-
   @override
-  State<daftar> createState() => _awalState();
+  State<daftar> createState() => _HomeWidgetState();
 }
 
-class _awalState extends State<daftar> {
+class _HomeWidgetState extends State<daftar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,17 +40,17 @@ class _awalState extends State<daftar> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(100),
                                   child: Image.asset(
-                                    'images/user.jpg',
+                                    'images/dokter.jpg',
                                     width: 100,
                                     height: 100,
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                                 onTap: () {
-                                  Navigator.pop(
+                                  Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => daftaruser(),
+                                        builder: (context) => regisvets(),
                                       ));
                                 }),
                           ),
@@ -66,17 +66,17 @@ class _awalState extends State<daftar> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Image.asset(
-                                'images/dokter.jpg',
+                                'images/user.jpg',
                                 width: 100,
                                 height: 100,
                                 fit: BoxFit.cover,
                               ),
                             ),
                             onTap: () {
-                              Navigator.pop(
+                              Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => daftarvets(),
+                                    builder: (context) => regisuser(),
                                   ));
                             },
                           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/awal.dart';
 import 'package:flutter_application_1/daftar.dart';
+import 'package:flutter_application_1/regisvets.dart';
 import 'package:flutter_application_1/login.dart';
 import 'package:flutter_application_1/home.dart';
 

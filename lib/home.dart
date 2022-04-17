@@ -11,7 +11,7 @@ class home extends StatefulWidget {
 
 class _HomeWidgetState extends State<home> {
   int currentTab = 0;
-  final List<Widget> screens = [daftar(), awal()];
+  final List<Widget> screens = [daftar(), awal(), login(), settinguser()];
 
   Widget currentScreen = awal();
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -171,21 +171,27 @@ class _HomeWidgetState extends State<home> {
                         currentTab = 0;
                       });
                     },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.local_hospital,
-                            color: currentTab == 0
-                                ? Color.fromRGBO(110, 108, 200, 1)
-                                : Colors.grey),
-                        Text(
-                          "Vets",
-                          style: TextStyle(
+                    child: GestureDetector(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.local_hospital,
                               color: currentTab == 0
                                   ? Color.fromRGBO(110, 108, 200, 1)
                                   : Colors.grey),
-                        )
-                      ],
+                          Text(
+                            "Vets",
+                            style: TextStyle(
+                                color: currentTab == 0
+                                    ? Color.fromRGBO(110, 108, 200, 1)
+                                    : Colors.grey),
+                          )
+                        ],
+                      ),
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => awal()));
+                      },
                     ),
                   ),
                 ],
