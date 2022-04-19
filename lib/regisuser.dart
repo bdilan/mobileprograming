@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/regisuser.dart';
 import 'package:flutter_application_1/login.dart';
+import 'package:flutter_application_1/registrasiuser.dart';
 
 class regisuser extends StatefulWidget {
   @override
@@ -154,8 +155,10 @@ class _HomePageWidgetState extends State<regisuser> {
                     padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                     color: Color(0xFF6E6CC8),
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => login()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => registrasiuser()));
                     },
                     child: Text(
                       "Masuk",

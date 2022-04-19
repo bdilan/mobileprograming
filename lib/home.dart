@@ -3,6 +3,7 @@ import 'package:flutter_application_1/awal.dart';
 import 'package:flutter_application_1/daftar.dart';
 import 'package:flutter_application_1/login.dart';
 import 'package:flutter_application_1/settinguser.dart';
+import 'package:flutter_application_1/registrasiuser.dart';
 
 class home extends StatefulWidget {
   @override
@@ -171,27 +172,21 @@ class _HomeWidgetState extends State<home> {
                         currentTab = 0;
                       });
                     },
-                    child: GestureDetector(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.local_hospital,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.local_hospital,
+                            color: currentTab == 0
+                                ? Color.fromRGBO(110, 108, 200, 1)
+                                : Colors.grey),
+                        Text(
+                          "Vets",
+                          style: TextStyle(
                               color: currentTab == 0
                                   ? Color.fromRGBO(110, 108, 200, 1)
                                   : Colors.grey),
-                          Text(
-                            "Vets",
-                            style: TextStyle(
-                                color: currentTab == 0
-                                    ? Color.fromRGBO(110, 108, 200, 1)
-                                    : Colors.grey),
-                          )
-                        ],
-                      ),
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => awal()));
-                      },
+                        )
+                      ],
                     ),
                   ),
                 ],
@@ -205,7 +200,7 @@ class _HomeWidgetState extends State<home> {
                       minWidth: 40,
                       onPressed: () {
                         setState(() {
-                          currentScreen = awal();
+                          currentScreen = home();
                           currentTab = 1;
                         });
                       },
